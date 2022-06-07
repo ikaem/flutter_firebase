@@ -1,9 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase/camera.dart';
 import 'package:flutter_firebase/happy_screen.dart';
 import 'package:flutter_firebase/login_screen.dart';
 import 'package:flutter_firebase/poll_screen.dart';
+import 'package:flutter_firebase/upload_file.dart';
 
 Future<void> main() async {
   // WidgetsFlutterBinding.ensureInitialized();
@@ -22,13 +24,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-      ),
-      home: const LoginScreen(),
-      // home: const PollScreen(),
-      // home: const HappyScreen(),
-    );
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.deepPurple,
+        ),
+        // home: const LoginScreen(),
+        // home: const UploadFileScreen(),
+        home: CameraScreen()
+        // home: const PollScreen(),
+        // home: const HappyScreen(),
+        );
   }
 }
